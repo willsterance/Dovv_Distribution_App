@@ -62,7 +62,7 @@ class CartPage extends StatelessWidget {
                             ),
                           ),
                           Icon(
-                            Icons.heart_broken,
+                            Icons.favorite,
                             color: Colors.red,
                           ),
                           Icon(Icons.delete_outlined),
@@ -176,7 +176,7 @@ class CartPage extends StatelessWidget {
                             ),
                           ),
                           Icon(
-                            Icons.heart_broken,
+                            Icons.favorite,
                             color: Colors.red,
                           ),
                           Icon(Icons.delete_outlined),
