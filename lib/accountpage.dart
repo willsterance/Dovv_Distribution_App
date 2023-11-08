@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled11/OrderPage.dart';
 import 'package:untitled11/accountpage.dart';
 import 'package:untitled11/cartpage.dart';
 import 'package:untitled11/explorepage.dart';
@@ -26,6 +27,7 @@ class AccountPage extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -183,7 +185,7 @@ class AccountPage extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => OfferPage()),
+                    MaterialPageRoute(builder: (context) => OrderPage()),
                   ),
                   child: Icon(
                     Icons.local_offer_sharp,

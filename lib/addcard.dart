@@ -18,7 +18,9 @@ class AddCardPage extends StatelessWidget {
         title: Text(
           "Add Card",
           style: TextStyle(
-              fontSize: 16, color: Color(0xFF223263), fontWeight: FontWeight.w700),
+              fontSize: 16,
+              color: Color(0xFF223263),
+              fontWeight: FontWeight.w700),
         ),
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
@@ -30,13 +32,19 @@ class AddCardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             const Text(
               "Card Number",
               style: TextStyle(
-                  fontSize: 16, color: Color(0xFF223263), fontWeight: FontWeight.w700),
+                  fontSize: 16,
+                  color: Color(0xFF223263),
+                  fontWeight: FontWeight.w700),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -45,16 +53,16 @@ class AddCardPage extends StatelessWidget {
             ),
             // Wrap the Expiration Date section in an Expanded widget to constrain its width.
 
-
             const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "Expiration Date",
                   style: TextStyle(
-                      fontSize: 16, color: Color(0xFF223263), fontWeight: FontWeight.w700),
+                      fontSize: 16,
+                      color: Color(0xFF223263),
+                      fontWeight: FontWeight.w700),
                 ),
-
                 TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -69,9 +77,10 @@ class AddCardPage extends StatelessWidget {
                 Text(
                   "Security Code",
                   style: TextStyle(
-                      fontSize: 16, color: Color(0xFF223263), fontWeight: FontWeight.w700),
+                      fontSize: 16,
+                      color: Color(0xFF223263),
+                      fontWeight: FontWeight.w700),
                 ),
-
                 TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -86,9 +95,10 @@ class AddCardPage extends StatelessWidget {
                 Text(
                   "Card Holder",
                   style: TextStyle(
-                      fontSize: 16, color: Color(0xFF223263), fontWeight: FontWeight.w700),
+                      fontSize: 16,
+                      color: Color(0xFF223263),
+                      fontWeight: FontWeight.w700),
                 ),
-
                 TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -98,32 +108,35 @@ class AddCardPage extends StatelessWidget {
               ],
             ),
 
-
-
-            SizedBox(height: 200,),
-            GestureDetector(onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> SucessPage()),);
-            },
+            SizedBox(
+              height: 200,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SucessPage()),
+                );
+              },
               child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.amber
-                  ),
+                      color: Colors.amber),
                   width: 343,
                   height: 57,
-                  child: Center(child: Text(
-                    "Add Card",
-                    style: TextStyle(
-                        fontSize: 14, color: Color(0xFF223263), fontWeight: FontWeight.w700),
-                  ),)
-              ),
+                  child: Center(
+                    child: Text(
+                      "Add Card",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFF223263),
+                          fontWeight: FontWeight.w700),
+                    ),
+                  )),
             ),
           ],
         ),
       ),
-
-
-
     );
   }
 }
