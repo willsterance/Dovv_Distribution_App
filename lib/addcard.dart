@@ -6,6 +6,8 @@ import 'package:untitled11/offerpage.dart';
 import 'package:untitled11/paymentpage.dart';
 import 'package:untitled11/secondepage.dart';
 
+import 'SucessPage.dart';
+
 class AddCardPage extends StatelessWidget {
   const AddCardPage({super.key});
 
@@ -99,18 +101,22 @@ class AddCardPage extends StatelessWidget {
 
 
             SizedBox(height: 200,),
-            Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.amber
-                ),
-                width: 343,
-                height: 57,
-                child: Center(child: Text(
-                  "Add Card",
-                  style: TextStyle(
-                      fontSize: 14, color: Color(0xFF223263), fontWeight: FontWeight.w700),
-                ),)
+            GestureDetector(onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> SucessPage()),);
+            },
+              child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.amber
+                  ),
+                  width: 343,
+                  height: 57,
+                  child: Center(child: Text(
+                    "Add Card",
+                    style: TextStyle(
+                        fontSize: 14, color: Color(0xFF223263), fontWeight: FontWeight.w700),
+                  ),)
+              ),
             ),
           ],
         ),

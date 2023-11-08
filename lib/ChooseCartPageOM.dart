@@ -7,6 +7,8 @@ import 'package:untitled11/offerpage.dart';
 import 'package:untitled11/paymentpage.dart';
 import 'package:untitled11/secondepage.dart';
 
+import 'SucessPage.dart';
+
 class ChooseCartPageOM extends StatelessWidget {
   const ChooseCartPageOM({super.key});
 
@@ -51,7 +53,7 @@ class ChooseCartPageOM extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "655868646",
+                  hintText: "Votre numéro de téléphone",
                 ),
               ),
             ),
@@ -69,25 +71,29 @@ class ChooseCartPageOM extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "20,000 fcfa",
+                  hintText: "Montant de votre achat",
                 ),
               ),
             ),
             SizedBox(height: 50,),
             Padding(
               padding: const EdgeInsets.all(15),
-              child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.amber
-                  ),
-                  width: 343,
-                  height: 57,
-                  child: Center(child: Text(
-                    "Pay",
-                    style: TextStyle(
-                        fontSize: 14, color: Colors.white, fontWeight: FontWeight.w700),
-                  ),)
+              child: GestureDetector(onTap:() {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> SucessPage()),);
+              },
+                child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Colors.amber
+                    ),
+                    width: 343,
+                    height: 57,
+                    child: Center(child: Text(
+                      "Pay",
+                      style: TextStyle(
+                          fontSize: 14, color: Colors.white, fontWeight: FontWeight.w700),
+                    ),)
+                ),
               ),
             ),
           ],
