@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled11/SucessPage.dart';
 import 'package:untitled11/accountpage.dart';
 import 'package:untitled11/cartpage.dart';
 import 'package:untitled11/explorepage.dart';
@@ -56,7 +57,7 @@ class ChooseCartPageMOMO extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "670020802",
+                  hintText: "Votre numéro de téléphone",
                 ),
               ),
             ),
@@ -74,25 +75,32 @@ class ChooseCartPageMOMO extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "20,000 fcfa",
+                  hintText: "Montant de votre achat",
                 ),
               ),
             ),
             SizedBox(height: 50,),
             Padding(
               padding: const EdgeInsets.all(15),
-              child: Container(
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(5),
-                   color: Colors.amber
-                 ),
-                width: 343,
-                height: 57,
-                  child: Center(child: Text(
-                    "Pay",
-                    style: TextStyle(
-                        fontSize: 14, color: Colors.white, fontWeight: FontWeight.w700),
-                  ),)
+              child: GestureDetector(onTap:
+                () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> SucessPage()),);
+                //Navigator.push(context, MaterialPageRoute((context)=> SucessPage()),)
+
+                },
+                child: Container(
+                   decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(5),
+                     color: Colors.amber
+                   ),
+                  width: 343,
+                  height: 57,
+                    child: Center(child: Text(
+                      "Pay",
+                      style: TextStyle(
+                          fontSize: 14, color: Colors.white, fontWeight: FontWeight.w700),
+                    ),)
+                ),
               ),
             ),
           ],
