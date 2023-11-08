@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Dovv App',color: Colors.red,
+      title: 'Dovv App',
+      color: Colors.red,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0XFF223263)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Dovv App'),
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 250,
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: Color(0XFF9098B1)),
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Row(
@@ -127,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 250,
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: Color(0XFF9098B1)),
                 borderRadius: BorderRadius.circular(5),
               ),
               child: const Row(
@@ -152,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 50,
                   width: 250,
                   decoration: BoxDecoration(
-                    color: Colors.amber,
+                    color: Color(0XFFF6D819),
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Center(
@@ -167,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   width: 150,
                   height: 2,
-                  color: Colors.grey,
+                  color: Color(0XFFEBF0FF),
                 ),
                 //SizedBox(width: 5),
                 Text('OR'),
@@ -175,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   width: 150,
                   height: 2,
-                  color: Colors.grey,
+                  color: Color(0XFFEBF0FF),
                 ),
               ],
             ),
@@ -187,11 +188,12 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 250,
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: Color(0XFF9098B1)),
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Row(
                 children: [
+
                   Icon(Icons.g_mobiledata),
                   SizedBox(width: 50),
                   Text('Login with Google'),
@@ -206,12 +208,12 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 250,
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: Color(0XFF9098B1)),
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Row(
                 children: [
-                  Icon(Icons.facebook),
+                  Icon(Icons.facebook, color: Colors.blue),
                   SizedBox(width: 50),
                   Text('Login with facebook'),
                 ],
@@ -220,7 +222,9 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 15,
             ),
-            Text('Forgot Password?', style: TextStyle(color: Colors.amber)),
+            Center(
+                child: const Text('Forgot Password?',
+                    style: TextStyle(color: Color(0XFFF6D819)))),
             SizedBox(
               height: 15,
             ),
@@ -228,10 +232,11 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Don\'t have a account? '),
-                Text("Register", style: TextStyle(color: Colors.amber)),
+                Text("Register", style: TextStyle(color: Color(0XFFF6D819))),
               ],
             ),
           ],
+
         ),
       ),
 
