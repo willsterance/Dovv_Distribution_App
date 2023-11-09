@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled11/FavoritePoduct.dart';
 import 'package:untitled11/accountpage.dart';
 import 'package:untitled11/cartpage.dart';
 import 'package:untitled11/explorepage.dart';
@@ -61,9 +62,15 @@ class CartPage extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Icon(
-                            Icons.favorite,
-                            color: Colors.red,
+                          GestureDetector(onTap: () {
+                            Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const FavoriteProduct()),
+                            );
+                          },
+                            child: Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                            ),
                           ),
                           Icon(Icons.delete_outlined),
                         ],
@@ -175,9 +182,15 @@ class CartPage extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Icon(
-                            Icons.favorite,
-                            color: Colors.red,
+                          GestureDetector(onTap: () {
+                            Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const FavoriteProduct()),
+                            );
+                          },
+                            child: Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                            ),
                           ),
                           Icon(Icons.delete_outlined),
                         ],
@@ -419,8 +432,7 @@ class CartPage extends StatelessWidget {
             Column(
               children: [
                 GestureDetector(
-                  onTap: () => Navigator.push(
-                    context,
+                  onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AccountPage()),
                   ),
                   child: Icon(
