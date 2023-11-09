@@ -55,10 +55,14 @@ class AccountPage extends StatelessWidget {
                   color: Color(0XFFF6D819),
                 ),
                 SizedBox(width: 16,),
-                Text(
-                  "Order",
-                  style: TextStyle(
-                      fontSize: 12, color: Color(0XFF223263), fontWeight: FontWeight.w700),
+                GestureDetector(onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+                },
+                  child: Text(
+                    "Order",
+                    style: TextStyle(
+                        fontSize: 12, color: Color(0XFF223263), fontWeight: FontWeight.w700),
+                  ),
                 ),
               ],
             ),

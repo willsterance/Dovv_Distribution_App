@@ -162,7 +162,7 @@ class OrderPage extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            "LQNSU346JK",
+                            "LQNSU346JM",
                             style: TextStyle(
                                 fontSize: 14,
                                 color: Color(0XFF223263),
@@ -176,7 +176,7 @@ class OrderPage extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            "Order at Lafyuu : August 1, 2017",
+                            "Order at Lafyuu : August 02, 2017",
                             style: TextStyle(
                                 fontSize: 12,
                                 color: Color(0XFF223263).withAlpha(127),
@@ -223,7 +223,7 @@ class OrderPage extends StatelessWidget {
                                 fontWeight: FontWeight.w700),
                           ),
                           Text(
-                            "2 Items purchased",
+                            "6 Items purchased",
                             style: TextStyle(
                                 fontSize: 12,
                                 color: Color(0XFF223263),
