@@ -189,7 +189,7 @@ class OfferPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Offers",
+                  "Offer",
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w400,
@@ -203,7 +203,7 @@ class OfferPage extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => AccountPage()),
+                    MaterialPageRoute(builder: (context) => OfferPage()),
                   ),
                   child: Icon(
                     Icons.account_box,

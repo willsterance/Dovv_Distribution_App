@@ -1180,7 +1180,7 @@ class _SecondePageState extends State<SecondePage> {
                   ),
                 ),
                 Text(
-                  "Offers",
+                  "Offer",
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w400,
@@ -1194,7 +1194,7 @@ class _SecondePageState extends State<SecondePage> {
                 GestureDetector(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => AccountPage()),
+                    MaterialPageRoute(builder: (context) => OfferPage()),
                   ),
                   child: Icon(
                     Icons.account_box,

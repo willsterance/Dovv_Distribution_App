@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled11/SeachPage.dart';
 import 'package:untitled11/accountpage.dart';
 import 'package:untitled11/cartpage.dart';
 import 'package:untitled11/explorepage.dart';
@@ -16,46 +17,60 @@ class _explorepageState extends State<ExplorePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: TextField(
-          decoration: InputDecoration(
-            hintText: 'Search Product',
-            prefixIcon: Icon(Icons.search, color: Color(0XFFF6D819)),
-          ),
-        ),
-      ),
 
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Container(
-                  height: 50,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(5),
+            GestureDetector(onTap:
+              () {Navigator.push(context,MaterialPageRoute(builder: (context) => SearchPage()),);
+
+              },
+              child: Row(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: const Row(
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.search),
+                        SizedBox(width: 20),
+                        Text('Seach Product')
+                      ],
+                    ),
                   ),
-                  child: const Row(
+                  Icon(Icons.favorite,color: Color(0XFFFB7181)),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Stack(
                     children: [
-                      SizedBox(width: 10),
-                      Icon(Icons.search),
-                      SizedBox(width: 20),
-                      Text('Seach Product')
+                      Icon(Icons.notifications,
+                      color: Color(0XFF9098B1),
+                        size: 24,
+                      ),
+                      Positioned(
+                        width: 8,
+                          height: 8,
+                          top: 71,
+                          left: 349,
+                          child: CircleAvatar(
+                            radius:9 ,
+                            backgroundColor:Color(0XFF0B0F82) ,
+
+                      ))
                     ],
                   ),
-                ),
-                Icon(Icons.heart_broken_sharp),
-                const SizedBox(
-                  width: 10,
-                ),
-                const Icon(Icons.heart_broken_sharp),
-              ],
+
+                ],
+              ),
             ),
             const SizedBox(height: 10,),
             const Row(
@@ -68,6 +83,13 @@ class _explorepageState extends State<ExplorePage> {
               ],
 
             ),
+
+
+
+
+
+
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
