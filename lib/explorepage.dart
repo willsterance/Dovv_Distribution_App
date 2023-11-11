@@ -5,6 +5,8 @@ import 'package:untitled11/cartpage.dart';
 import 'package:untitled11/explorepage.dart';
 import 'package:untitled11/offerpage.dart';
 import 'package:untitled11/secondepage.dart';
+
+import 'NotificationPage.dart';
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});
 
@@ -50,23 +52,27 @@ class _explorepageState extends State<ExplorePage> {
                   const SizedBox(
                     width: 10,
                   ),
-                  Stack(
-                    children: [
-                      Icon(Icons.notifications,
-                      color: Color(0XFF9098B1),
-                        size: 24,
-                      ),
-                      Positioned(
-                        width: 8,
-                          height: 8,
-                          top: 71,
-                          left: 349,
-                          child: CircleAvatar(
-                            radius:9 ,
-                            backgroundColor:Color(0XFF0B0F82) ,
+                  GestureDetector(onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NotifiacationsPage()),);
+                  },
+                    child: Stack(
+                      children: [
+                        Icon(Icons.notifications,
+                        color: Color(0XFF9098B1),
+                          size: 24,
+                        ),
+                        Positioned(
+                          width: 8,
+                            height: 8,
+                            top: 71,
+                            left: 349,
+                            child: CircleAvatar(
+                              radius:9 ,
+                              backgroundColor:Color(0XFF0B0F82) ,
 
-                      ))
-                    ],
+                        ))
+                      ],
+                    ),
                   ),
 
                 ],
